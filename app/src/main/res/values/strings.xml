@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">دردشة العرب</string>
+
+    <string name="welcome_title">دردشة العرب</string>
+    <string name="welcome_subtitle">تواصل بأناقة</string>
+
+    <string name="email_hint">البريد الإلكتروني</string>
+    <string name="password_hint">كلمة المرور</string>
+    <string name="login_button">تسجيل الدخول</string>
+    <string name="guest_button">الدخول كضيف</string>
+    <string name="no_account_text">ليس لديك حساب؟ سجّل الآن</string>
+    <string name="register_title">إنشاء حساب جديد</string>
+    <string name="username_hint">اسم المستخدم</string>
+    <string name="confirm_password_hint">تأكيد كلمة المرور</string>
+    <string name="register_button">إنشاء الحساب</string>
+    <string name="have_account_text">لديك حساب؟ سجّل الدخول</string>
+
+    <string name="error_empty_fields">الرجاء تعبئة كل الحقول</string>
+    <string name="error_password_mismatch">كلمتا المرور غير متطابقتين</string>
+    <string name="error_weak_password">كلمة المرور يجب أن تكون 6 أحرف على الأقل</string>
+    <string name="error_invalid_email">البريد الإلكتروني غير صحيح</string>
+
+    <string name="home_placeholder">مرحباً بك في دردشة العرب</string>
+    <string name="logout">تسجيل الخروج</string>
+</resources>
