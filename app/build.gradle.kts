@@ -41,6 +41,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
     implementation("androidx.activity:activity-ktx:1.9.1")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))

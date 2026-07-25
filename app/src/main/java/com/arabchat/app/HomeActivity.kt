@@ -24,6 +24,11 @@ class HomeActivity : AppCompatActivity() {
         }
         tvWelcome.text = label
 
+        val tvEnterChat: TextView = findViewById(R.id.tvEnterChat)
+        tvEnterChat.setOnClickListener {
+            startActivity(Intent(this, ChatActivity::class.java))
+        }
+
         tvLogout.setOnClickListener {
             auth.signOut()
             startActivity(Intent(this, LoginActivity::class.java))

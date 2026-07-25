@@ -4,6 +4,10 @@
 
     <string name="welcome_title">دردشة العرب</string>
     <string name="welcome_subtitle">تواصل بأناقة</string>
+    <string name="from_company">من Ytrana</string>
+    <string name="general_chat_title">الدردشة العامة</string>
+    <string name="message_hint">اكتب رسالة…</string>
+    <string name="enter_chat">دخول الدردشة</string>
 
     <string name="email_hint">البريد الإلكتروني</string>
     <string name="password_hint">كلمة المرور</string>

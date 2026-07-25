@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="@color/bgBase"
     android:gravity="center"
-    android:padding="24dp">
+    android:padding="32dp">
 
     <TextView
         android:id="@+id/tvWelcome"
@@ -17,10 +17,26 @@
         android:gravity="center" />
 
     <TextView
+        android:id="@+id/tvEnterChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_gradient_button"
+        android:text="@string/enter_chat"
+        android:textColor="@color/textOnAccent"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
         android:id="@+id/tvLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/bg_input_field"
         android:text="@string/logout"
         android:textColor="@color/errorRed"
