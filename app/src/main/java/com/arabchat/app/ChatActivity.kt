@@ -89,8 +89,8 @@ class ChatActivity : AppCompatActivity() {
         )
 
         messagesRef.add(message)
-            .addOnFailureListener {
-                Toast.makeText(this, "تعذر إرسال الرسالة", Toast.LENGTH_SHORT).show()
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "خطأ: ${e.message}", Toast.LENGTH_LONG).show()
             }
 
         etMessage.setText("")
