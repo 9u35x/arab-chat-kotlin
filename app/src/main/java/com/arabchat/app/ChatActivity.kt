@@ -19,10 +19,14 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var adapter: MessageAdapter
     private lateinit var rvMessages: RecyclerView
     private lateinit var etMessage: EditText
+    private lateinit var chatId: String
 
     private var listenerRegistration: ListenerRegistration? = null
     private val messagesRef by lazy {
-        db.collection("rooms").document("general").collection("messages")
+        db.collection("chats").document(chatId).collection("messages")
+    }
+    private val chatRef by lazy {
+        db.collection("chats").document(chatId)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,15 +37,21 @@ class ChatActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         val currentUser = auth.currentUser
-        if (currentUser == null) {
+        val chatIdExtra = intent.getStringExtra("chatId")
+        if (currentUser == null || chatIdExtra == null) {
             finish()
             return
         }
+        chatId = chatIdExtra
+
+        val chatTitle = intent.getStringExtra("chatTitle") ?: getString(R.string.general_chat_title)
 
         rvMessages = findViewById(R.id.rvMessages)
         etMessage = findViewById(R.id.etMessage)
         val tvSend: TextView = findViewById(R.id.tvSend)
         val tvBack: TextView = findViewById(R.id.tvBack)
+        val tvTitle: TextView = findViewById(R.id.tvChatTitle)
+        tvTitle.text = chatTitle
 
         val layoutManager = LinearLayoutManager(this)
         layoutManager.stackFromEnd = true
@@ -92,6 +102,13 @@ class ChatActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 Toast.makeText(this, "خطأ: ${e.message}", Toast.LENGTH_LONG).show()
             }
+
+        chatRef.update(
+            mapOf(
+                "lastMessage" to text,
+                "lastMessageTime" to com.google.firebase.firestore.FieldValue.serverTimestamp()
+            )
+        )
 
         etMessage.setText("")
     }

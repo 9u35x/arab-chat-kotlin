@@ -37,5 +37,9 @@
             android:name=".ChatActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".NewChatActivity"
+            android:exported="false" />
+
     </application>
 </manifest>

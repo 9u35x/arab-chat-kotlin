@@ -8,6 +8,13 @@
     <string name="general_chat_title">الدردشة العامة</string>
     <string name="message_hint">اكتب رسالة…</string>
     <string name="enter_chat">دخول الدردشة</string>
+    <string name="no_chats_yet">لا توجد محادثات بعد\nاضغط + لبدء محادثة جديدة</string>
+    <string name="new_chat_title">محادثة جديدة</string>
+    <string name="create_group">إنشاء مجموعة</string>
+    <string name="group_name_hint">اسم المجموعة</string>
+    <string name="create_group_button">إنشاء المجموعة</string>
+    <string name="error_select_members">اختر عضوين على الأقل</string>
+    <string name="error_group_name">أدخل اسم المجموعة</string>
 
     <string name="email_hint">البريد الإلكتروني</string>
     <string name="password_hint">كلمة المرور</string>

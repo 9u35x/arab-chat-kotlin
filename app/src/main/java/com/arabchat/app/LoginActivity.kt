@@ -54,10 +54,19 @@ class LoginActivity : AppCompatActivity() {
         setLoading(true)
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
-                setLoading(false)
                 if (task.isSuccessful) {
-                    goHome()
+                    val user = auth.currentUser
+                    if (user != null) {
+                        UserRepo.ensureProfile(user) {
+                            setLoading(false)
+                            goHome()
+                        }
+                    } else {
+                        setLoading(false)
+                        goHome()
+                    }
                 } else {
+                    setLoading(false)
                     Toast.makeText(
                         this,
                         task.exception?.localizedMessage ?: getString(R.string.error_invalid_email),
@@ -71,10 +80,19 @@ class LoginActivity : AppCompatActivity() {
         setLoading(true)
         auth.signInAnonymously()
             .addOnCompleteListener { task ->
-                setLoading(false)
                 if (task.isSuccessful) {
-                    goHome()
+                    val user = auth.currentUser
+                    if (user != null) {
+                        UserRepo.ensureProfile(user) {
+                            setLoading(false)
+                            goHome()
+                        }
+                    } else {
+                        setLoading(false)
+                        goHome()
+                    }
                 } else {
+                    setLoading(false)
                     Toast.makeText(
                         this,
                         task.exception?.localizedMessage ?: "تعذر تسجيل الدخول كضيف",
