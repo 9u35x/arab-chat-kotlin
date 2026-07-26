@@ -6,6 +6,7 @@
     <string name="welcome_subtitle">تواصل بأناقة</string>
     <string name="from_company">من Ytrana</string>
     <string name="general_chat_title">الدردشة العامة</string>
+    <string name="profile_title">الملف الشخصي</string>
     <string name="message_hint">اكتب رسالة…</string>
     <string name="enter_chat">دخول الدردشة</string>
     <string name="no_chats_yet">لا توجد محادثات بعد\nاضغط + لبدء محادثة جديدة</string>

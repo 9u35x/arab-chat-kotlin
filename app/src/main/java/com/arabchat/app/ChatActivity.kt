@@ -62,6 +62,11 @@ class ChatActivity : AppCompatActivity() {
 
         tvBack.setOnClickListener { finish() }
         tvSend.setOnClickListener { sendMessage() }
+        tvTitle.setOnClickListener {
+            val profileIntent = android.content.Intent(this, ProfileActivity::class.java)
+            profileIntent.putExtra("name", chatTitle)
+            startActivity(profileIntent)
+        }
     }
 
     override fun onStart() {
