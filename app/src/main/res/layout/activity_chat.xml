@@ -44,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@drawable/bg_chat_wallpaper"
         android:clipToPadding="false"
         android:paddingTop="8dp"
         android:paddingBottom="8dp" />
@@ -56,11 +57,35 @@
         android:background="@color/amoledBlack"
         android:padding="10dp">
 
+        <TextView
+            android:id="@+id/tvPickImage"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/ripple_row"
+            android:gravity="center"
+            android:text="📷"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/tvRecordVoice"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/ripple_row"
+            android:gravity="center"
+            android:text="🎤"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true" />
+
         <EditText
             android:id="@+id/etMessage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginStart="6dp"
             android:background="@drawable/bg_input_field"
             android:hint="@string/message_hint"
             android:textColor="@color/textPrimaryDark"
